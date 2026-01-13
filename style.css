@@ -35,31 +35,34 @@ body::before {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 12px;
+    gap: 15px;
     z-index: 999;
 }
 
 .top-socials a {
-    width: 55px;
-    height: 55px;
-    background: rgba(255,0,0,0.2);
-    border: 3px solid #ff1a1a;
+    width: 65px;
+    height: 65px;
+    background: rgba(255,0,0,0.25);
+    border: 4px solid #ff1a1a;
     border-radius: 50%;
     color: #ffdddd;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    line-height: 49px;
-    text-align: center;
+    font-family: 'Bungee', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     transition: all 0.3s;
-    box-shadow: 0 0 12px rgba(255,0,0,0.5);
+    box-shadow: 0 0 15px rgba(255,0,0,0.6);
+    overflow: hidden;
 }
 
 .top-socials a:hover {
-    transform: scale(1.2) rotate(8deg);
+    transform: scale(1.15) rotate(10deg);
     background: #ff0000;
     color: #000;
-    box-shadow: 0 0 25px #ff0000;
+    box-shadow: 0 0 30px #ff0000;
 }
 
 header {
@@ -107,7 +110,6 @@ h1 {
     50% { box-shadow: 0 0 70px #ff0000; }
 }
 
-/* CA Section */
 #contract {
     max-width: 900px;
     margin: 40px auto;
@@ -127,37 +129,8 @@ h1 {
     background: rgba(30,0,0,0.7);
     border: 4px solid #ff1a1a;
     border-radius: 20px;
-    padding: 30px;
+    padding: 40px;
     box-shadow: 0 0 40px rgba(255,0,0,0.5);
-}
-
-#ca-text {
-    font-family: monospace;
-    font-size: 1.6rem;
-    color: #ffdddd;
-    background: #000;
-    padding: 15px;
-    border-radius: 10px;
-    word-break: break-all;
-    margin-bottom: 20px;
-}
-
-#copy-btn {
-    background: #ff0000;
-    color: #000;
-    border: none;
-    padding: 15px 40px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 0 20px #ff0000;
-    transition: all 0.3s;
-}
-
-#copy-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 40px #ff0000;
 }
 
 section {
@@ -175,6 +148,41 @@ h2 {
     margin-bottom: 40px;
 }
 
+/* How to Buy cards */
+.buy-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.buy-card {
+    background: rgba(20,0,0,0.75);
+    border: 3px solid #ff1a1a;
+    border-radius: 18px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255,0,0,0.4);
+    transition: all 0.4s;
+}
+
+.buy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px #ff0000;
+}
+
+.buy-card h3 {
+    font-family: 'Bungee', cursive;
+    font-size: 2.2rem;
+    color: #ffdddd;
+    margin-bottom: 15px;
+}
+
+.buy-card p {
+    font-size: 1.2rem;
+    color: #ffaaaa;
+}
+
+/* Roadmap same as before */
 #roadmap .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -210,6 +218,46 @@ h2 {
     color: #ffaaaa;
 }
 
+/* Rage Generator */
+#ragegen {
+    text-align: center;
+}
+
+#rage-btn {
+    background: #ff0000;
+    color: #000;
+    border: 5px solid #ff4444;
+    padding: 20px 60px;
+    font-size: 2.5rem;
+    font-family: 'Creepster', cursive;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 30px #ff0000;
+    transition: all 0.3s;
+    margin: 20px 0;
+}
+
+#rage-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px #ff0000;
+}
+
+#rage-btn.shake {
+    animation: rage-shake 0.4s infinite;
+}
+
+#soon-text {
+    font-size: 3.5rem;
+    color: #ff4444;
+    text-shadow: 0 0 25px #ff0000;
+    animation: flicker 1.8s infinite alternate;
+}
+
+@keyframes flicker {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
+
 #socials ul {
     list-style: none;
     display: flex;
@@ -236,19 +284,6 @@ h2 {
     color: #000;
     transform: scale(1.1);
     box-shadow: 0 0 35px #ff0000;
-}
-
-.coming-soon {
-    text-align: center;
-    font-size: 3.5rem;
-    color: #ff4444;
-    text-shadow: 0 0 25px #ff0000;
-    animation: flicker 1.8s infinite alternate;
-}
-
-@keyframes flicker {
-    0%,100% { opacity: 1; }
-    50% { opacity: 0.35; }
 }
 
 footer {
