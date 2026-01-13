@@ -29,14 +29,13 @@ body::before {
     100% { opacity: 0.7; }
 }
 
+/* Top socials - NO fixed position anymore */
 .top-socials {
-    position: fixed;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
+    justify-content: center;
     gap: 15px;
-    z-index: 999;
+    margin: 20px 0 40px;
+    flex-wrap: wrap;
 }
 
 .top-socials a {
@@ -67,7 +66,7 @@ body::before {
 
 header {
     text-align: center;
-    padding: 80px 20px 40px;
+    padding: 60px 20px 20px;
 }
 
 h1 {
@@ -91,6 +90,7 @@ h1 {
     margin-top: 15px;
 }
 
+/* Rest remains the same as previous version */
 .hero {
     display: flex;
     justify-content: center;
@@ -148,7 +148,6 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* How to Buy cards */
 .buy-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -182,7 +181,6 @@ h2 {
     color: #ffaaaa;
 }
 
-/* Roadmap same as before */
 #roadmap .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -218,7 +216,6 @@ h2 {
     color: #ffaaaa;
 }
 
-/* Rage Generator */
 #ragegen {
     text-align: center;
 }
