@@ -29,8 +29,7 @@
 <section id="contract">
     <h2>CONTRACT ADDRESS</h2>
     <div class="ca-box">
-        <p id="ca-text">YOUR_CA_HERE_XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-        <button id="copy-btn">COPY CA</button>
+        <p class="coming-soon">COMING SOON</p>
     </div>
 </section>
 
@@ -45,12 +44,24 @@
 
 <section id="how-to-buy">
     <h2>How to Buy</h2>
-    <ol>
-        <li>Get a Solana wallet (Phantom or Backpack).</li>
-        <li>Fund it with SOL.</li>
-        <li>Go to Pump.fun or Dex after launch.</li>
-        <li>Buy $ANGRY and embrace the rage.</li>
-    </ol>
+    <div class="buy-cards">
+        <div class="buy-card">
+            <h3>1. Wallet</h3>
+            <p>Get a Solana wallet (Phantom or Backpack).</p>
+        </div>
+        <div class="buy-card">
+            <h3>2. Fund</h3>
+            <p>Fund it with SOL.</p>
+        </div>
+        <div class="buy-card">
+            <h3>3. Launch</h3>
+            <p>Go to Pump.fun or Dex after launch.</p>
+        </div>
+        <div class="buy-card">
+            <h3>4. Buy</h3>
+            <p>Buy $ANGRY and embrace the rage.</p>
+        </div>
+    </div>
 </section>
 
 <section id="roadmap">
@@ -58,68 +69,45 @@
     <div class="cards-container">
         <div class="card">
             <h3>LORE RELEASE</h3>
-            <p>Lore drops first on X<br>
-            One strong lore tweet + rage meme / GIF<br>
-            No launch talk — just RAGE talk<br>
-            Just the emotion, the idea, the face of the coin</p>
+            <p>Lore drops first on X<br>One strong lore tweet + rage meme / GIF<br>No launch talk — just RAGE talk<br>Just the emotion, the idea, the face of the coin</p>
         </div>
 
         <div class="card">
             <h3>ORGANIC ATTENTION</h3>
-            <p>Light raids begin<br>
-            Organic engagement under relevant posts<br>
-            Eyes on Solana influencers (no begging)<br>
-            Telegram opens for rage filled conversations only</p>
+            <p>Light raids begin<br>Organic engagement under relevant posts<br>Eyes on Solana influencers (no begging)<br>Telegram opens for rage filled conversations only</p>
         </div>
 
         <div class="card">
             <h3>COMMUNITY BUILD (WEEK 1)</h3>
-            <p>Gather core community over 7 days<br>
-            Daily light raids<br>
-            Consistent memes and replies<br>
-            Custom meme shills under influencer posts<br>
-            Everything filled with pure rage</p>
+            <p>Gather core community over 7 days<br>Daily light raids<br>Consistent memes and replies<br>Custom meme shills under influencer posts<br>Everything filled with pure rage</p>
         </div>
 
         <div class="card">
             <h3>FAIR-LAUNCH</h3>
-            <p>Fair launch on Pump.fun<br>
-            No presale<br>
-            No whitelist<br>
-            No private allocations<br>
-            Dev launches like everyone else</p>
+            <p>Fair launch on Pump.fun<br>No presale<br>No whitelist<br>No private allocations<br>Dev launches like everyone else</p>
         </div>
 
         <div class="card">
             <h3>FULL RAID MODE</h3>
-            <p>Heavy X raids immediately after launch<br>
-            Aggressive rage memes<br>
-            Timeline flooded with $ANGRY<br>
-            Community-led meme shills<br>
-            Emotion-driven momentum</p>
+            <p>Heavy X raids immediately after launch<br>Aggressive rage memes<br>Timeline flooded with $ANGRY<br>Community-led meme shills<br>Emotion-driven momentum</p>
         </div>
 
         <div class="card">
             <h3>MAINTAIN MOMENTUM</h3>
-            <p>Keep memes flowing<br>
-            Highlight community reactions<br>
-            Stay consistent<br>
-            Let the emotion carry the narrative</p>
+            <p>Keep memes flowing<br>Highlight community reactions<br>Stay consistent<br>Let the emotion carry the narrative</p>
         </div>
 
         <div class="card">
             <h3>MARKETING</h3>
-            <p>DEX gets paid (after strong floor)<br>
-            Volume bot boost<br>
-            DEX boost at 200k<br>
-            Massive X memecoin push</p>
+            <p>DEX gets paid (after strong floor)<br>Volume bot boost<br>DEX boost at 200k<br>Massive X memecoin push</p>
         </div>
     </div>
 </section>
 
 <section id="ragegen">
     <h2>RAGE GENERATOR</h2>
-    <p class="coming-soon">🔥 Coming Soon 🔥</p>
+    <button id="rage-btn">GENERATE RAGE</button>
+    <p id="soon-text" style="display:none;" class="coming-soon">COMING SOON</p>
 </section>
 
 <section id="socials">
@@ -131,7 +119,6 @@
         <li><a href="YOUR_X_COMMUNITY_LINK_HERE" target="_blank">X Community</a></li>
         <li><a href="YOUR_DEX_LINK_HERE" target="_blank">DexScreener / DexTools</a></li>
     </ul>
-    <p class="note">Replace links when ready.</p>
 </section>
 
 <footer>
@@ -139,13 +126,14 @@
 </footer>
 
 <script>
-// Simple copy button
-document.getElementById('copy-btn').addEventListener('click', function() {
-    const ca = document.getElementById('ca-text').innerText;
-    navigator.clipboard.writeText(ca).then(() => {
-        this.innerText = 'COPIED!';
-        setTimeout(() => { this.innerText = 'COPY CA'; }, 2000);
-    });
+// Copy placeholder (if you add real CA later)
+// Rage button shake + show text
+document.getElementById('rage-btn').addEventListener('click', function() {
+    this.classList.add('shake');
+    document.getElementById('soon-text').style.display = 'block';
+    setTimeout(() => {
+        this.classList.remove('shake');
+    }, 800);
 });
 </script>
 
