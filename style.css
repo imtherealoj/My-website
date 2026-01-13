@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #0a0000 url('https://images.stockcake.com/public/2/7/0/2702ea36-5e48-48ae-bd53-f7c413e639c7/digital-rage-unleashed-stockcake.jpg') center/cover no-repeat fixed;
+    background: #0a0000;
     color: #ff1a1a;
     font-family: 'Impact', 'Bungee', sans-serif;
     overflow-x: hidden;
@@ -18,109 +18,148 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(10,0,0,0.7), rgba(50,0,0,0.4));
+    background: radial-gradient(circle at center, rgba(50,0,0,0.6) 0%, rgba(10,0,0,0.9) 70%);
     pointer-events: none;
-    z-index: -2;
-    animation: glitch-bg 8s infinite alternate;
+    z-index: -1;
+    animation: pulse-red 10s infinite alternate;
 }
 
-@keyframes glitch-bg {
-    0%,100% { opacity: 0.3; transform: translate(0); }
-    20% { opacity: 0.6; transform: translate(-2px, 2px); }
-    40% { opacity: 0.4; transform: translate(3px, -1px); }
+@keyframes pulse-red {
+    0% { opacity: 0.4; }
+    100% { opacity: 0.7; }
+}
+
+.top-socials {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 999;
+}
+
+.top-socials a {
+    width: 55px;
+    height: 55px;
+    background: rgba(255,0,0,0.2);
+    border: 3px solid #ff1a1a;
+    border-radius: 50%;
+    color: #ffdddd;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 49px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 0 12px rgba(255,0,0,0.5);
+}
+
+.top-socials a:hover {
+    transform: scale(1.2) rotate(8deg);
+    background: #ff0000;
+    color: #000;
+    box-shadow: 0 0 25px #ff0000;
 }
 
 header {
     text-align: center;
-    padding: 60px 20px 30px;
-    position: relative;
+    padding: 80px 20px 40px;
 }
 
 h1 {
     font-family: 'Creepster', cursive;
-    font-size: 6rem;
+    font-size: 7rem;
     color: #ff0000;
-    text-shadow: 
-        0 0 10px #ff0000,
-        0 0 30px #ff0000,
-        0 0 60px #800000,
-        3px 3px 0 #000,
-        -3px -3px 0 #000;
-    letter-spacing: 6px;
-    animation: rage-shake 0.4s infinite alternate;
+    text-shadow: 0 0 15px #ff0000, 0 0 40px #800000, 4px 4px 0 #000, -4px -4px 0 #000;
+    letter-spacing: 8px;
+    animation: rage-shake 0.5s infinite alternate;
 }
 
 @keyframes rage-shake {
-    0% { transform: translate(-2px, 2px) rotate(-1deg); }
-    100% { transform: translate(2px, -2px) rotate(1deg); }
+    0% { transform: translate(-3px, 3px) rotate(-2deg); }
+    100% { transform: translate(3px, -3px) rotate(2deg); }
 }
 
 .slogan {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #ff4444;
-    text-shadow: 2px 2px 0 #000;
-    margin-top: 10px;
-    letter-spacing: 3px;
+    text-shadow: 3px 3px 0 #000;
+    margin-top: 15px;
 }
 
-/* Top social buttons */
-.top-socials {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 15px;
-    z-index: 1000;
-}
-
-.top-socials a {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background: rgba(255,0,0,0.15);
-    border: 3px solid #ff1a1a;
-    border-radius: 50%;
-    color: #ff1a1a;
-    font-size: 1.8rem;
-    line-height: 54px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s;
-    box-shadow: 0 0 15px rgba(255,0,0,0.6);
-}
-
-.top-socials a:hover {
-    transform: scale(1.2) rotate(10deg);
-    background: #ff0000;
-    color: #000;
-    box-shadow: 0 0 30px #ff0000;
-}
-
-/* Hero */
 .hero {
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
 }
 
 .hero img {
-    max-width: 400px;
-    border: 5px solid #ff0000;
-    border-radius: 20px;
-    box-shadow: 
-        0 0 30px #ff0000,
-        inset 0 0 40px rgba(255,0,0,0.5);
-    filter: drop-shadow(0 0 20px #800000);
-    animation: pulse-border 2s infinite;
+    max-width: 420px;
+    border: 6px solid #ff0000;
+    border-radius: 25px;
+    box-shadow: 0 0 40px #ff0000, inset 0 0 50px rgba(255,0,0,0.6);
+    animation: pulse-border 2.5s infinite;
 }
 
 @keyframes pulse-border {
-    0%,100% { box-shadow: 0 0 30px #ff0000; }
-    50% { box-shadow: 0 0 60px #ff0000; }
+    0%,100% { box-shadow: 0 0 40px #ff0000; }
+    50% { box-shadow: 0 0 70px #ff0000; }
 }
 
-/* Sections */
+/* CA Section */
+#contract {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#contract h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 4.5rem;
+    color: #ff3333;
+    text-shadow: 4px 4px 0 #000;
+    margin-bottom: 30px;
+}
+
+.ca-box {
+    background: rgba(30,0,0,0.7);
+    border: 4px solid #ff1a1a;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 40px rgba(255,0,0,0.5);
+}
+
+#ca-text {
+    font-family: monospace;
+    font-size: 1.6rem;
+    color: #ffdddd;
+    background: #000;
+    padding: 15px;
+    border-radius: 10px;
+    word-break: break-all;
+    margin-bottom: 20px;
+}
+
+#copy-btn {
+    background: #ff0000;
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff0000;
+    transition: all 0.3s;
+}
+
+#copy-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px #ff0000;
+}
+
 section {
     max-width: 1200px;
     margin: 60px auto;
@@ -129,67 +168,48 @@ section {
 
 h2 {
     font-family: 'Creepster', cursive;
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: #ff3333;
     text-align: center;
     text-shadow: 4px 4px 0 #000;
     margin-bottom: 40px;
-    letter-spacing: 4px;
 }
 
-/* Roadmap cards - 3 columns */
 #roadmap .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
 }
 
 .card {
-    background: rgba(20,0,0,0.7);
+    background: rgba(20,0,0,0.75);
     border: 3px solid #ff1a1a;
-    border-radius: 15px;
+    border-radius: 18px;
     padding: 25px;
-    box-shadow: 0 0 25px rgba(255,0,0,0.4);
+    box-shadow: 0 0 30px rgba(255,0,0,0.4);
     transition: all 0.4s;
-    position: relative;
-    overflow: hidden;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    inset: -50%;
-    background: linear-gradient(45deg, transparent, rgba(255,0,0,0.3), transparent);
-    animation: scan 4s infinite linear;
-    pointer-events: none;
-}
-
-@keyframes scan {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 50px #ff0000;
+    transform: translateY(-12px);
+    box-shadow: 0 0 60px #ff0000;
     border-color: #ffffff;
 }
 
 .card h3 {
     font-family: 'Bungee', cursive;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: #ffdddd;
     text-shadow: 3px 3px 0 #800000;
     margin-bottom: 15px;
 }
 
 .card p {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1.15rem;
+    line-height: 1.6;
     color: #ffaaaa;
 }
 
-/* Socials bottom */
 #socials ul {
     list-style: none;
     display: flex;
@@ -200,45 +220,42 @@ h2 {
 }
 
 #socials li a {
-    display: inline-block;
-    padding: 15px 30px;
-    background: rgba(255,0,0,0.2);
+    padding: 16px 35px;
+    background: rgba(255,0,0,0.25);
     border: 3px solid #ff1a1a;
     border-radius: 50px;
     color: #ffdddd;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
-    text-shadow: 1px 1px 0 #000;
     transition: all 0.3s;
 }
 
 #socials li a:hover {
     background: #ff0000;
     color: #000;
-    transform: scale(1.15);
-    box-shadow: 0 0 30px #ff0000;
+    transform: scale(1.1);
+    box-shadow: 0 0 35px #ff0000;
 }
 
-/* Others */
 .coming-soon {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #ff4444;
-    text-shadow: 0 0 20px #ff0000;
-    animation: flicker 1.5s infinite alternate;
+    text-shadow: 0 0 25px #ff0000;
+    animation: flicker 1.8s infinite alternate;
 }
 
 @keyframes flicker {
     0%,100% { opacity: 1; }
-    50% { opacity: 0.4; }
+    50% { opacity: 0.35; }
 }
 
 footer {
     text-align: center;
-    padding: 40px;
+    padding: 50px 20px;
     color: #ff6666;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-shadow: 2px 2px 0 #000;
-    border-top: 4px solid #800000;
+    border-top: 5px solid #800000;
 }
