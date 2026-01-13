@@ -9,6 +9,14 @@
 
 <body>
 
+<div class="top-socials">
+    <a href="YOUR_X_LINK_HERE" target="_blank">X</a>
+    <a href="YOUR_TELEGRAM_LINK_HERE" target="_blank">TG</a>
+    <a href="YOUR_PUMPFUN_LINK_HERE" target="_blank">PF</a>
+    <a href="YOUR_X_COMMUNITY_LINK_HERE" target="_blank">COMM</a>
+    <a href="YOUR_DEX_LINK_HERE" target="_blank">DEX</a>
+</div>
+
 <header>
     <h1>$ANGRY</h1>
     <p class="slogan">Fuel the rage. Burn the calm.</p>
@@ -16,6 +24,14 @@
 
 <section class="hero">
     <img src="angry.png" alt="$ANGRY meme image">
+</section>
+
+<section id="contract">
+    <h2>CONTRACT ADDRESS</h2>
+    <div class="ca-box">
+        <p id="ca-text">YOUR_CA_HERE_XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+        <button id="copy-btn">COPY CA</button>
+    </div>
 </section>
 
 <section id="about">
@@ -38,65 +54,66 @@
 </section>
 
 <section id="roadmap">
-    <h2>Roadmap</h2>
+    <h2>ROADMAP</h2>
+    <div class="cards-container">
+        <div class="card">
+            <h3>LORE RELEASE</h3>
+            <p>Lore drops first on X<br>
+            One strong lore tweet + rage meme / GIF<br>
+            No launch talk — just RAGE talk<br>
+            Just the emotion, the idea, the face of the coin</p>
+        </div>
 
-    <div class="card">
-        <h3>LORE RELEASE</h3>
-        <p>Lore drops first on X<br>
-        One strong lore tweet + rage meme / GIF<br>
-        No launch talk — just RAGE talk<br>
-        Just the emotion, the idea, the face of the coin</p>
-    </div>
+        <div class="card">
+            <h3>ORGANIC ATTENTION</h3>
+            <p>Light raids begin<br>
+            Organic engagement under relevant posts<br>
+            Eyes on Solana influencers (no begging)<br>
+            Telegram opens for rage filled conversations only</p>
+        </div>
 
-    <div class="card">
-        <h3>ORGANIC ATTENTION</h3>
-        <p>Light raids begin<br>
-        Organic engagement under relevant posts<br>
-        Eyes on Solana influencers (no begging)<br>
-        Telegram opens for rage filled conversations only</p>
-    </div>
+        <div class="card">
+            <h3>COMMUNITY BUILD (WEEK 1)</h3>
+            <p>Gather core community over 7 days<br>
+            Daily light raids<br>
+            Consistent memes and replies<br>
+            Custom meme shills under influencer posts<br>
+            Everything filled with pure rage</p>
+        </div>
 
-    <div class="card">
-        <h3>COMMUNITY BUILD (WEEK 1)</h3>
-        <p>Gather core community over 7 days<br>
-        Daily light raids<br>
-        Consistent memes and replies<br>
-        Custom meme shills under influencer posts<br>
-        Everything filled with pure rage</p>
-    </div>
+        <div class="card">
+            <h3>FAIR-LAUNCH</h3>
+            <p>Fair launch on Pump.fun<br>
+            No presale<br>
+            No whitelist<br>
+            No private allocations<br>
+            Dev launches like everyone else</p>
+        </div>
 
-    <div class="card">
-        <h3>FAIR-LAUNCH</h3>
-        <p>Fair launch on Pump.fun<br>
-        No presale<br>
-        No whitelist<br>
-        No private allocations<br>
-        Dev launches like everyone else</p>
-    </div>
+        <div class="card">
+            <h3>FULL RAID MODE</h3>
+            <p>Heavy X raids immediately after launch<br>
+            Aggressive rage memes<br>
+            Timeline flooded with $ANGRY<br>
+            Community-led meme shills<br>
+            Emotion-driven momentum</p>
+        </div>
 
-    <div class="card">
-        <h3>FULL RAID MODE</h3>
-        <p>Heavy X raids immediately after launch<br>
-        Aggressive rage memes<br>
-        Timeline flooded with $ANGRY<br>
-        Community-led meme shills<br>
-        Emotion-driven momentum</p>
-    </div>
+        <div class="card">
+            <h3>MAINTAIN MOMENTUM</h3>
+            <p>Keep memes flowing<br>
+            Highlight community reactions<br>
+            Stay consistent<br>
+            Let the emotion carry the narrative</p>
+        </div>
 
-    <div class="card">
-        <h3>MAINTAIN MOMENTUM</h3>
-        <p>Keep memes flowing<br>
-        Highlight community reactions<br>
-        Stay consistent<br>
-        Let the emotion carry the narrative</p>
-    </div>
-
-    <div class="card">
-        <h3>MARKETING</h3>
-        <p>DEX gets paid (after strong floor)<br>
-        Volume bot boost<br>
-        DEX boost at 200k<br>
-        Massive X memecoin push</p>
+        <div class="card">
+            <h3>MARKETING</h3>
+            <p>DEX gets paid (after strong floor)<br>
+            Volume bot boost<br>
+            DEX boost at 200k<br>
+            Massive X memecoin push</p>
+        </div>
     </div>
 </section>
 
@@ -107,8 +124,6 @@
 
 <section id="socials">
     <h2>Community & Links</h2>
-
-    <!-- EDIT YOUR SOCIAL LINKS BELOW -->
     <ul>
         <li><a href="YOUR_PUMPFUN_LINK_HERE" target="_blank">Pump.fun</a></li>
         <li><a href="YOUR_TELEGRAM_LINK_HERE" target="_blank">Telegram</a></li>
@@ -116,13 +131,23 @@
         <li><a href="YOUR_X_COMMUNITY_LINK_HERE" target="_blank">X Community</a></li>
         <li><a href="YOUR_DEX_LINK_HERE" target="_blank">DexScreener / DexTools</a></li>
     </ul>
-
-    <p class="note">You can edit these later — just replace the link text.</p>
+    <p class="note">Replace links when ready.</p>
 </section>
 
 <footer>
     <p>$ANGRY — born from rage.</p>
 </footer>
+
+<script>
+// Simple copy button
+document.getElementById('copy-btn').addEventListener('click', function() {
+    const ca = document.getElementById('ca-text').innerText;
+    navigator.clipboard.writeText(ca).then(() => {
+        this.innerText = 'COPIED!';
+        setTimeout(() => { this.innerText = 'COPY CA'; }, 2000);
+    });
+});
+</script>
 
 </body>
 </html>
